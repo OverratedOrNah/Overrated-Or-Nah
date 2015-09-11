@@ -1,0 +1,76 @@
+<html>
+	<head>
+
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' /> 
+
+		<!--JQuery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+		<!--Parse-->
+		<script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+
+		<!--FontAwesome Icons-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<link href='https://fonts.googleapis.com/css?family=Lobster|PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+		<link href='app.css' rel='stylesheet' type'text/css'>
+		<link href='animate.css' rel='stylesheet' type'text/css'>
+		<script src='app.js'></script>
+		<script src='list.js'></script>
+
+		<title>Overrated or Nah</title>
+	</head>
+	<body>
+		<div class='main width'>
+			<div class='head'>
+				<span><h1>Overrated or Nah</h1></span>
+				<span class="fa fa-trophy menu-trigger"></span>
+				<p>Hint: Click the trophy</p>
+			</div>
+
+			<div class='info'>
+				<img class='img animated rollIn'></img>
+				<h2 class='name width'></h2>
+			</div>
+
+			<div class='rater width'>
+				<div class='overrated fa fa-hand-pointer-o fa-flip-vertical'></div>
+				<div class='underrated fa fa-hand-pointer-o'></div>
+			</div>
+		</div>
+
+		<div class='rankings'>
+			<ul class='buttons'>
+				<li class="fa fa-trophy selected" id='All' onclick='sortAll()'>
+				<li class="fa fa-users" id='People' onclick='sortPeople()'>
+				<li class="fa fa-laptop" id='Tech' onclick='sortTech()'>
+				<li class="fa fa-cutlery" id='Restaurants' onclick='sortRestaurants()'>
+				<li class="fa fa-fire" id='Trends' onclick='sortTrends()'>
+				<li class="fa fa-black-tie" id='Fashion' onclick='sortFashion()'>
+				<li class="fa fa-map-pin" id='Places' onclick='sortPlaces()'>
+				<li class="fa fa-globe" id='Other' onclick='sortOther()'>
+			</ul>
+			<div class='rank_which'>All</div>
+			<table cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+						<h2>Overrated</h2>
+					</td>
+					<td>
+						<h2>Underrated</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class='list-col overrated-col' id='OL'>
+						<ul class='list overrated-list'></ul>
+					</td>
+					<td class='list-col underrated-col' id='UL'>
+						<ul class='list underrated-list'></ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+	</body>
+</html>
