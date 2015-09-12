@@ -26,8 +26,10 @@ function rate(id, rate){
 			}
 		});
 	}else{
-		$('.img').removeClass('animated rollIn rollOut');
-		random();
+		setTimeout(function(){
+			$('.img').removeClass('animated rollIn rollOut');
+			random();
+		},500);
 	}
 }
 
