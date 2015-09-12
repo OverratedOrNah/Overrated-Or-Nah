@@ -118,6 +118,11 @@ $(function(){
 		id = $('.name').attr('id');
 		rate(id,'Underrated');
 	});
+
+	$('.dunno').click(function(){
+		$('.img').addClass('animated rollOut');
+		rate();
+	});
 });
 
 function sortAll(){
