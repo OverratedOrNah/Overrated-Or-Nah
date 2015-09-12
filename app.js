@@ -12,18 +12,23 @@ function random(){
 
 function rate(id, rate){
 
-	var Point = Parse.Object.extend("Ratings");
-	var point = new Point();
-	point.id = id;
-	point.increment(rate);
-	point.save(null, {
-		success: function(){
-			setTimeout(function(){
-				$('.img').removeClass('animated rollIn rollOut');
-				random();
-			},500);
-		}
-	});
+	if (id){
+		var Point = Parse.Object.extend("Ratings");
+		var point = new Point();
+		point.id = id;
+		point.increment(rate);
+		point.save(null, {
+			success: function(){
+				setTimeout(function(){
+					$('.img').removeClass('animated rollIn rollOut');
+					random();
+				},500);
+			}
+		});
+	}else{
+		$('.img').removeClass('animated rollIn rollOut');
+		random();
+	}
 }
 
 function removeExtras(){
