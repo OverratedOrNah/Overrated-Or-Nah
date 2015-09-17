@@ -16,50 +16,29 @@
 
 		<link href='app.css' rel='stylesheet' type'text/css'>
 		<link href='animate.css' rel='stylesheet' type'text/css'>
+		<script src='app.js'></script>
+		<script src='list.js'></script>
+
 		<title>Overrated or Nah</title>
 		<link rel="icon" type="image/png" href="fav.png">
 	</head>
-
-	<style>
-		.menu li{
-			display:inline-block;
-		}
-
-		.menu li:hover a{
-			border-bottom:5px solid;
-		}
-
-		.menu li a{
-			text-decoration: none;
-			font-family: 'PT Sans';
-			font-size:1.5rem;
-			margin:0 2rem;
-			color:white;
-		}
-
-		body{
-			background-color: #7361B2;
-			color:white;
-		}
-
-		.index{
-			margin-top:7.5rem;
-		}
-	</style>
-
 	<body>
-		<div class='main width index'>
+		<div class='main width'>
 			<div class='head'>
-				<span><h1 style='color:#FFE0C5'>Overrated or Nah</h1></span>
+				<span class="fa fa-hand-o-left menu-trigger"></span>
+				<span><h1>Overrated or Nah</h1></span>
 			</div>
-			<ul class='menu'>
-				<li><a href='app.html'>Play</a></li>
-				<li><a href='rankings.html'>Rankings</a></li>
-				<li><a href='about.html'>About Us</a></li>
-				<li><a href='faq.html'>FAQ</a></li>
-				<li><a href='partners.html'>Partners</a></li>
-				<li><a href='contact.html'>Contact</a></li>
-			</ul>
+
+			<div class='info'>
+				<img class='img animated rollIn'></img>
+				<h2 class='name width'></h2>
+			</div>
+
+			<div class='rater width'>
+				<div class='overrated'><h2>Overrated</h2></div>
+				<div class='dunno'><h2>IDK</h2></div>
+				<div class='underrated'><h2>Underrated</h2></div>
+			</div>
 		</div>
 	</body>
 </html>

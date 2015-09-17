@@ -37,6 +37,10 @@ function removeExtras(){
 
 }
 
+function goBack(){
+	window.location.href='index.html';
+}
+
 $(function(){
 	Parse.initialize("m27szeyNRqyvfN4c5Wv8vq4VhiXUxGnSigHq6GPv", "QC369b83GOFzlKLTdRoBy7aITeavck8c2c5KS0d8");
 
@@ -67,27 +71,13 @@ $(function(){
 		random();
 	}).then(function menu(){
 		$('.menu-trigger').click(function(){
-			if ($('.rankings').is(":hidden")){
-				$('.rankings').css('display','block').addClass('animated slideInRight');
-				$('.width').animate({width: '70%'},1000);
-				$('.main').css('box-shadow', 'inset -0.25em 0 0 0 rgba(115, 97, 178, 0.50)');
-			}else{
-				$('.rankings').addClass('animated slideOutRight');
-				$('.width').animate(
-					{width: '100%'},
-					1000,
-					function(){
-						$('.rankings').hide().removeClass('animated slideOutRight slideInRight');
-					});
-				$('.main').css('box-shadow', 'none');
-			}
+			window.location.href='index.html';
 		});
 	}).then(function rankings(){
 		for (i = 0; i < objects.length; i++) {
 			//Overrated
 			var o_item = 	"<li class='overrated--li "+objects[i].Category+"--li'>";
 			o_item +=		"<span class='name--li'>"+objects[i].Name+"</span>";
-			o_item +=		"<span class='rating--li'>"+objects[i].Overrated+"</span>";
 			o_item +=		"</li>";
 
 			$('.overrated-list').prepend(o_item);
@@ -95,7 +85,6 @@ $(function(){
 			//Underrated
 			var u_item = 	"<li class='underrated--li "+objects[i].Category+"--li'>";
 			u_item +=		"<span class='name--li'>"+objects[i].Name+"</span>";
-			u_item +=		"<span class='rating--li'>"+objects[i].Underrated+"</span>";
 			u_item +=		"</li>";
 
 			$('.underrated-list').prepend(u_item);
