@@ -23,25 +23,25 @@ var options = {
 
 //Index
 app.get('/', function index(req, res){
-	res.sendFile('index.html', options);
+	res.send('index.html', options);
 });
 
 app.get('/app.html', function index(req, res){
-	res.sendFile('app.html', options);
+	res.send('app.html', options);
 });
 
 app.get('/rankings.html', function index(req, res){
-	res.sendFile('rankings.html', options);
+	res.send('rankings.html', options);
 });
 
 app.get('/about.html', function index(req, res){
-	res.sendFile('about.html', options);
+	res.send('about.html', options);
 });
 
 app.get('/partners.html', function index(req, res){
-	res.sendFile('partners.html', options);
+	res.send('partners.html', options);
 });
 
 app.get('/contact.html', function index(req, res){
-	res.sendFile('contact.html', options);
+	res.send('contact.html', options);
 });
