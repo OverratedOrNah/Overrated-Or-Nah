@@ -25,3 +25,23 @@ var options = {
 app.get('/', function index(req, res){
 	res.sendFile('index.html', options);
 });
+
+app.get('/app.html', function index(req, res){
+	res.sendFile('app.html', options);
+});
+
+app.get('/rankings.html', function index(req, res){
+	res.sendFile('rankings.html', options);
+});
+
+app.get('/about.html', function index(req, res){
+	res.sendFile('about.html', options);
+});
+
+app.get('/partners.html', function index(req, res){
+	res.sendFile('partners.html', options);
+});
+
+app.get('/contact.html', function index(req, res){
+	res.sendFile('contact.html', options);
+});
