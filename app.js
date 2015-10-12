@@ -78,6 +78,7 @@ $(function(){
 			//Overrated
 			var o_item = 	"<li class='overrated--li "+objects[i].Category+"--li'>";
 			o_item +=		"<span class='name--li'>"+objects[i].Name+"</span>";
+			o_item +=		"<span class='rankings--li'>"+objects[i].Overrated+"</span>";
 			o_item +=		"</li>";
 
 			$('.overrated-list').prepend(o_item);
@@ -85,6 +86,7 @@ $(function(){
 			//Underrated
 			var u_item = 	"<li class='underrated--li "+objects[i].Category+"--li'>";
 			u_item +=		"<span class='name--li'>"+objects[i].Name+"</span>";
+			o_item +=		"<span class='rankings--li'>"+objects[i].Underrated+"</span>";
 			u_item +=		"</li>";
 
 			$('.underrated-list').prepend(u_item);
