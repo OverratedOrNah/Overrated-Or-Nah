@@ -247,7 +247,7 @@ table td{
 	width: 100%;
 }
 
-.rating--li{
+.rating--li{display:none;
 	float:right;
 	padding-right:.25rem;
 }
